@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.antoine.dotlove.activities.LoginActivity;
-import com.antoine.dotlove.MyChatsRecyclerViewAdapter;
+import com.antoine.dotlove.recyclerViewAdapters.MyChatsRecyclerViewAdapter;
 import com.antoine.dotlove.R;
 import com.antoine.dotlove.activities.MainActivity;
 import com.antoine.dotlove.models.Chat;
