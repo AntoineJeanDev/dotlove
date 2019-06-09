@@ -1,0 +1,8 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.antoine.dotlove",
+        "sha256_cert_fingerprints": ["41:3D:A6:B7:3C:91:B3:B6:94:0C:DA:77:0C:57:CC:59:6A:EC:33:31:30:A7:60:0B:D4:D0:21:E7:8A:27:BF:24"]
+    }
+}]
