@@ -57,23 +57,39 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/home_photo_view"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="291dp"
-                android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="300dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_photo_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/home_name_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="sans-serif-smallcaps"
                 android:text="Alexandra"
                 android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/home_techlang_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TechLanguages"
                 android:textSize="18sp" />
         </LinearLayout>
 

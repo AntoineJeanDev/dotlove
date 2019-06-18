@@ -1,4 +1,4 @@
-package com.antoine.dotlove.activities;
+package com.antoine.dotlove.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.antoine.dotlove.R;
+import com.antoine.dotlove.activities.LoginActivity;
+import com.antoine.dotlove.activities.MainActivity;
 import com.antoine.dotlove.models.User;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;

@@ -135,6 +135,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (targetIndex < mTargets.size() - 1) {
+                    mListener.onValidButtonPressed(mTargets.get(targetIndex));
                     targetIndex++;
                 } else {
                     Toast.makeText(getContext(), "Plus de target à afficher", Toast.LENGTH_SHORT).show();
@@ -148,7 +149,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (targetIndex < mTargets.size() - 1) {
-                targetIndex++;
+                    targetIndex++;
                 } else {
                     Toast.makeText(getContext(), "Plus de target à afficher", Toast.LENGTH_SHORT).show();
                 }
@@ -160,7 +161,7 @@ public class HomeFragment extends Fragment {
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(String choice) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(choice);
+            mListener.onHomeFragmentInteraction(choice);
         }
     }
 
@@ -193,7 +194,8 @@ public class HomeFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(String choice);
+        void onHomeFragmentInteraction(String choice);
+        void onValidButtonPressed(User target);
     }
 
 
@@ -215,16 +217,24 @@ public class HomeFragment extends Fragment {
     }
 
     private void fillTarget(View view) {
-        User u = mTargets.get(targetIndex);
+        User target = mTargets.get(targetIndex);
 
         if (view != null) {
             // picture
             ImageView photoView = view.findViewById(R.id.home_photo_view);
-            Picasso.get().load(Uri.parse(u.getPhotoUrl())).into(photoView);
+            Uri url = Uri.parse(target.getPhotoUrl());
+            Picasso.get()
+                    .load(url)
+                    .into(photoView);
 
             // name
             TextView nameView = view.findViewById(R.id.home_name_view);
-            nameView.setText(u.getDisplayName());
+            nameView.setText(target.getDisplayName());
+
+            // techLanguages
+            TextView techLangView = view.findViewById(R.id.home_techlang_view);
+            String langages = "Langages : " + target.getTechLanguages().toString();
+            techLangView.setText(langages);
         }
     }
 

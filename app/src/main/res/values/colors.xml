@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#004c40</color>
     <color name="colorAccent">#48a999</color>
 
+    <color name="user_pink">#ef9a9a</color>
+    <color name="user_blue">#9fa8da</color>
+
 </resources>

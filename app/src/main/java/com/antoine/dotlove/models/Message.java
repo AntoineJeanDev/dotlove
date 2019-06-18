@@ -4,8 +4,7 @@ public class Message {
     private String user;
     private String content;
 
-    public Message() {
-    }
+    public Message() {}
 
     public Message(String user, String content) {
         this.user = user;
